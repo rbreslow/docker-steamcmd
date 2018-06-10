@@ -8,5 +8,5 @@ deploy:
   - provider: script
     script: "scripts/cipublish"
     on:
-      repo: rbreslow/steamcmd
+      repo: rbreslow/docker-steamcmd
       branch: master
