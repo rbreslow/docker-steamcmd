@@ -1,4 +1,4 @@
-# docker-steamcmd
+# docker-steamcmd ![Travis (.org)](https://img.shields.io/travis/rbreslow/docker-steamcmd)
 
 This repository contains a `Dockerfile` designed to support installing and updating various dedicated servers available on Steam using [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD).
 
@@ -7,13 +7,13 @@ This repository contains a `Dockerfile` designed to support installing and updat
 First, build the container image with:
 
 ```bash
-$ docker build -t quay.io/rbreslow/steamcmd:slim .
+docker build -t quay.io/rbreslow/steamcmd:slim .
 ```
 
 Then, create an instance of the container image:
 
 ```bash
-$ docker run --rm -ti --volume /tmp/css_ds:/root/css_ds quay.io/rbreslow/steamcmd
+$ docker run --rm -ti --volume /tmp/css_ds:/var/lib/steam/css_ds quay.io/rbreslow/steamcmd:slim
 ...
 Steam Console Client (c) Valve Corporation
 -- type 'quit' to exit --
@@ -30,7 +30,7 @@ Steam>login anonymous
 Connecting anonymously to Steam Public...Logged in OK
 Waiting for user info...OK
 
-Steam>force_install_dir /root/css_ds
+Steam>force_install_dir /var/lib/steam/css_ds
 
 Steam>app_update 232330
 ...
@@ -52,5 +52,5 @@ platform                   thirdpartylegalnotices.txt
 An example of how to use `cibuild` to build and test an image:
 
 ```bash
-$ CI=1 ./scripts/cibuild
+CI=1 ./scripts/cibuild
 ```
