@@ -1,4 +1,4 @@
-# docker-steamcmd [![Travis (.org) branch](https://img.shields.io/travis/rbreslow/docker-steamcmd/master)](http://travis-ci.org/rbreslow/docker-steamcmd) [![quay.io](https://img.shields.io/badge/quay.io-slim-blue)](https://quay.io/repository/rbreslow/steamcmd)
+# docker-steamcmd [![Travis (.org) branch](https://img.shields.io/travis/rbreslow/docker-steamcmd/master)](http://travis-ci.org/rbreslow/docker-steamcmd) [![Docker Repository on Quay](https://quay.io/repository/rbreslow/steamcmd/status "Docker Repository on Quay")](https://quay.io/repository/rbreslow/steamcmd)
 
 This repository contains a `Dockerfile` designed to support installing and updating various dedicated servers available on Steam using [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD).
 
