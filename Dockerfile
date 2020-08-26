@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 LABEL maintainer="Rocky Breslow <breslowrocky@gmail.com>"
 
@@ -7,10 +7,10 @@ RUN \
 
 ENV DEBIAN_FRONTEND "noninteractive"
 
-# `steamcmd` is nonfree
-RUN echo "deb http://deb.debian.org/debian stretch non-free" > /etc/apt/sources.list.d/steamcmd.list
+# steamcmd is nonfree
+RUN echo "deb http://deb.debian.org/debian buster non-free" > /etc/apt/sources.list.d/steamcmd.list
 
-# Install `steamcmd` and agree to interactive license
+# Install steamcmd and agree to interactive license
 RUN set -ex \
    && deps=" \
    ca-certificates \
