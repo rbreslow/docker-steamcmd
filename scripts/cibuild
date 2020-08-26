@@ -14,14 +14,14 @@ Build container images from templates.
 "
 }
 
-if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
-    if [ "${1:-}" = "--help" ]; then
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    if [[ "${1:-}" == "--help" ]]; then
         usage
     else
         docker \
             build -t "quay.io/rbreslow/steamcmd:slim" .
 
-        scripts/test
+        ./scripts/test
 
         docker images
     fi
